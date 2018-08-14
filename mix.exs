@@ -32,7 +32,8 @@ defmodule Krabbytime.Mixfile do
   defp deps do
     [
       {:phoenix, "~> 1.3.4"},
-      {:cowboy, "~> 1.0"}
+      {:cowboy, "~> 1.0"},
+      {:distillery, "~> 2.0.0-rc.12", runtime: false}
     ]
   end
 end

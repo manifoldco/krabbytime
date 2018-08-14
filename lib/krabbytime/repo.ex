@@ -11,11 +11,18 @@ defmodule Krabbytime.Repo do
       end: 15 * 60}
 
   @videos [
-    %{code: "AiUYQWvcgew",
-      number: 150,
-      text: "One pathetic sob story later...",
-      start: 2 * 60,
-      end: 5 * 60},
+    @fallback, # 19
+    %{code: "iEqkRaLSGu8",
+      number: 145,
+      text: "Many secret patties later...",
+      # A good meal. 20 to 35 minutes seems right!
+      start: 20 * 60,
+      end: 35 * 60},
+    %{code: "_Hu-myJQ6yQ",
+      number: 146,
+      text: "Moments later...",
+      start: 0,
+      end: 2 * 60},
     %{code: "2qOWxk7MglU",
       number: 147,
       text: "One nap later...",
@@ -27,7 +34,16 @@ defmodule Krabbytime.Repo do
       # source: https://www.mayoclinic.org/digestive-system/expert-answers/faq-20058340
       start: 39 * 60 * 60,
       end: 55 * 60 * 60},
-    @fallback,
+    %{code: "-o3mTmyN6gc",
+      number: 149,
+      text: "Six months later...",
+      start: 180 * 24 * 60 * 60 * 60,
+      end: 195 * 24 * 60 * 60 * 60},
+    %{code: "AiUYQWvcgew",
+      number: 150,
+      text: "One pathetic sob story later...",
+      start: 2 * 60,
+      end: 5 * 60},
   ]
 
   def get(seconds) do

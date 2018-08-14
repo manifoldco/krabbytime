@@ -1,4 +1,6 @@
 defmodule Krabbytime.Repo do
+  require Logger
+
   # Videos come from here:
   # https://www.youtube.com/channel/UCjfmzjLRyiwgMnZ2pltNSlQ/videos
 
@@ -56,6 +58,7 @@ defmodule Krabbytime.Repo do
       Enum.random(candidates)
     end
 
+    Logger.info("redirecting user to time card #{code}")
     "https://img.youtube.com/vi/#{code}/maxresdefault.jpg"
   end
 end

@@ -19,6 +19,7 @@ defmodule Krabbytime.Mixfile do
   def application do
     [
       mod: {Krabbytime.Application, []},
+      applications: [:timber, :phoenix, :cowboy, :parse_trans, :plug],
       extra_applications: [:logger, :runtime_tools]
     ]
   end
@@ -33,7 +34,8 @@ defmodule Krabbytime.Mixfile do
     [
       {:phoenix, "~> 1.3.4"},
       {:cowboy, "~> 1.0"},
-      {:distillery, "~> 2.0.0-rc.12", runtime: false}
+      {:timber, "~> 2.5"},
+      {:distillery, "~> 2.0.0-rc.12", runtime: false},
     ]
   end
 end

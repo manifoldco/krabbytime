@@ -1,7 +1,6 @@
 defmodule KrabbytimeWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :krabbytime
 
-  plug Plug.Logger
 
   plug Plug.Parsers,
     parsers: [:urlencoded, :multipart, :json],
@@ -10,6 +9,11 @@ defmodule KrabbytimeWeb.Endpoint do
 
   plug Plug.MethodOverride
   plug Plug.Head
+
+  # Add Timber plugs for capturing HTTP context and events
+  plug Timber.Integrations.SessionContextPlug
+  plug Timber.Integrations.HTTPContextPlug
+  plug Timber.Integrations.EventPlug
 
   plug KrabbytimeWeb.Router
 

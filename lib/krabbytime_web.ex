@@ -19,7 +19,7 @@ defmodule KrabbytimeWeb do
 
   def controller do
     quote do
-      use Phoenix.Controller, namespace: KrabbytimeWeb
+      use Phoenix.Controller, log: false, namespace: KrabbytimeWeb
       import Plug.Conn
       import KrabbytimeWeb.Router.Helpers
     end
@@ -51,7 +51,7 @@ defmodule KrabbytimeWeb do
 
   def channel do
     quote do
-      use Phoenix.Channel
+      use Phoenix.Channel, log_join: false, log_handle_in: false
     end
   end
 
